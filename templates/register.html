@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+
+    <link rel="preload" href="{% static 'css/register.css' %}" as="style" />
+	<link rel="stylesheet" href="{% static 'css/register.css' %}">
+
+</head>
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <img src="{% static 'images/register.png' %}" alt="Image">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.username }}
+                {{ form.password1 }}
+                {{ form.password2 }}
+                <a href="{% url 'login_view' %}" id="login">login</a>
+                <button type="submit" id="submit-btn">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

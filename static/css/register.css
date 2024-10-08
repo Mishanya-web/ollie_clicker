@@ -1,0 +1,129 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        @font-face {
+            font-family: 'DarkGraffiti';
+            src: url('../fonts/DarkGraffiti-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'DarkGraffiti', sans-serif;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/wall.gif');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .inner-container {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+
+        form {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        input, button, a {
+            position: absolute;
+            width: 30%;
+            height: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: transparent;
+            outline: none;
+            border: none;
+            color: white;
+            font-size: 3vw;
+            text-align: center;
+            font-family: 'DarkGraffiti', sans-serif;
+        }
+
+        input::placeholder {
+            color: black;
+        }
+
+        #field1 {
+		color: black;
+            top: 31.2%;
+        }
+
+        #field2 {
+			color: black;
+            top: 45.5%;
+        }
+
+        #field3 {
+			color: black;
+            top: 57%;
+        }
+
+        #login {
+            color: black;
+            bottom: 20%;
+        }
+
+        #submit-btn {
+            bottom: 4%;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .inner-container {
+                width: 80%;
+                height: auto;
+            }
+
+            input, button {
+                font-size: 5vw;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .inner-container {
+                width: auto;
+                height: 80%;
+            }
+
+            img {
+                height: 100%;
+                width: auto;
+            }
+
+            input, button {
+                font-size: 2.5vw;
+            }
+        }

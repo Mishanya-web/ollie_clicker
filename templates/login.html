@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+
+    <link rel="preload" href="{% static 'css/login.css' %}" as="style" />
+	<link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="inner-container">
+            <img src="{% static 'images/login.png' %}" alt="Image">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.username }}
+                {{ form.password }}
+                <a href="{% url 'register_view' %}" id="register">register</a>
+                <button type="submit" id="submit-btn">SUBMIT</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

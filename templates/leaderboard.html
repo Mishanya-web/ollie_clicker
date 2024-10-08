@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leaderboard</title>
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="preload" href="{% static 'css/leaderboard.css' %}" as="style" />
+    <link rel="stylesheet" href="{% static 'css/leaderboard.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="top-menu">
+                <a href="{% url 'clicker_view' %}">
+                    <img src="{% static 'images/game.png' %}" class="game-button" alt="Game"></a>
+
+                <a href="{% url 'logout_view' %}">
+                    <img src="{% static 'images/logout.png' %}" class="logout-button" alt="Logout"></a>
+            </div>
+        </header>
+        <main>
+            <table class="score-table">
+                <thead>
+                    <tr>
+                        <th>Place</th>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for gamer in gamers %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{ gamer.user.username }}</td>
+                        <td>{{ gamer.score }}</td>
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td colspan="3">Нет данных для отображения</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+        @font-face {
+            font-family: 'DarkGraffiti';
+            src: url('../fonts/DarkGraffiti-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'DarkGraffiti', Arial, sans-serif;
+        }
+
+        .container {
+            background: url('../images/wall.gif') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        .top-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 15%;
+        }
+
+        .top-menu img {
+            width: 40px;
+            height: 40px;
+        }
+
+        main {
+            padding-top: 80px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .score-table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            opacity: 0.8;
+            border-radius: 15px;
+            overflow: hidden;
+            border: none;
+        }
+
+        .score-table th, .score-table td {
+            padding: 10px;
+            text-align: center;
+            font-size: 4vw;
+            border: none;
+        }
+
+        .score-table th {
+            background-color: #333;
+            color: white;
+        }
+
+        .score-table tbody tr:nth-child(odd) {
+            background-color: #9DFF32;
+        }
+
+        .score-table tbody tr:nth-child(even) {
+            background-color: #1EC31B;
+        }
+
+        @media (min-width: 768px) {
+            .top-menu img.game-button {
+                margin-left: -15%;
+            }
+
+            .top-menu img.logout-button {
+                margin-right: -15%;
+            }
+
+            .score-table th, .score-table td {
+                font-size: 2vw;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .top-menu {
+                padding: 0 10px;
+            }
+
+            .top-menu img {
+                margin: 0;
+            }
+
+            .score-table {
+                width: 95%;
+            }
+        }
