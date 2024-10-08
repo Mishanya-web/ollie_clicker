@@ -7,7 +7,7 @@ A real-time multiplayer web application game built with Django, Django Channels,
 - Real-time click counter using WebSockets
 - Live leaderboard to track top players
 - Responsive design for mobile and desktop
-- Scalable backend with Django Channels and Redis
+- Scalable backend with Django Channels 
 
 ## Tech Stack
 
@@ -15,9 +15,7 @@ A real-time multiplayer web application game built with Django, Django Channels,
 - **Frontend**: HTML, CSS, JavaScript (WebSockets)
 - **Database**: PostgreSQL (or SQLite for local development)
 - **Real-time Communication**: WebSockets (via Django Channels)
-- **Other Tools**: Redis (for channels layer), Docker (for deployment)
 
-## Installation
 
 ### Prerequisites
 
